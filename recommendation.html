@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation - TechHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to TechHub</h1>
+    <p>Choose your preferred way to study:</p>
+
+    <!-- Preference Buttons -->
+    <button onclick="setPreference('video')">I prefer Videos</button>
+    <button onclick="setPreference('docs')">I prefer Documents</button>
+
+    <!-- Redirect to main page -->
+    <p>Once you choose, you will be redirected to your personalized learning experience.</p>
+</div>
+
+<script>
+    // Set user preference in localStorage
+    function setPreference(preference) {
+        localStorage.setItem("studyPreference", preference);
+        alert(`Your preference (${preference}) has been saved!`);
+        window.location.href = "next.html"; // Redirect to main page
+    }
+</script>
+
+</body>
+</html>

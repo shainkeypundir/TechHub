@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="next.css">
+</head>
+<body>
+
+<!-- Global Progress Bar -->
+<div class="global-progress">
+    <div class="progress-bar">
+        <div class="progress-fill" id="global-progress-fill"></div>
+    </div>
+    <p>Overall Progress: <span id="global-progress-percentage">0%</span>
+ (<span id="global-completed-topics">0</span>/<span id="global-total-topics">0</span> topics)</p>
+</div>
+
+<!-- Topic 1 Progress -->
+<div class="topic" data-topic-total="3">
+    <h3>Introduction</h3>
+    
+    <div class="progress-bar">
+        <div class="progress-fill topic-progress-fill" style="width: 0%;"></div>
+    </div>
+    <p>Progress: <span class="topic-progress-percentage">0%</span> (<span class="completed-subtopics">0</span>/<span class="total-subtopics">3</span> subtopics)</p>
+    <ul>
+        <li><input type="checkbox" class="subtopic-checkbox"> Learn the Basics</li>
+        <li><input type="checkbox" class="subtopic-checkbox"> Writing Semantic HTML</li>
+        <li><input type="checkbox" class="subtopic-checkbox"> Forms and Validation</li>
+    </ul> 
+</div>
+
+<!-- Topic 2 Progress -->
+<div class="topic" data-topic-total="3">
+    <h3>Intermediate Topics</h3>
+    <div class="progress-bar">
+        <div class="progress-fill topic-progress-fill" style="width: 0%;"></div>
+    </div>
+    <p>Progress: <span class="topic-progress-percentage">0%</span> (<span class="completed-subtopics">0</span>/<span class="total-subtopics">3</span> subtopics)</p>
+    <ul>
+        <li><input type="checkbox" class="subtopic-checkbox"> Learn the Basics</li>
+        <li><input type="checkbox" class="subtopic-checkbox"> Writing Semantic HTML</li>
+        <li><input type="checkbox" class="subtopic-checkbox"> Forms and Validation</li>
+
+        <li><input type="checkbox" class="subtopic-checkbox"> Learn the Basics</li>
+        <li><input type="checkbox" class="subtopic-checkbox"> Writing Semantic HTML</li>
+        <li><input type="checkbox" class="subtopic-checkbox"> Forms and Validation</li>    
+    </ul>
+</div>
+
+ 
+<script src="progress.js"></script>
+</body>
+</html>

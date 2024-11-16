@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechHub</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  
+  <script>
+    // Protect the page: Check if user is logged in
+    const isLoggedIn = localStorage.getItem("loggedIn");
+    if (!isLoggedIn) {
+      window.location.href = "login.html"; // Redirect to login page if not logged in
+    }
+  </script>
+</head>
+<body>
+  <div class="content">
+
+    <!-- Navbar -->
+    <nav class="navBar">
+      <div class="nav-content">
+        <div class="logo">
+          TechHub
+        </div>
+        <div class="contacts">
+          Open Source
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bootcamp Section -->
+    <div class="free">
+      <p>100 % Free 11-Week Bootcamp</p>
+    </div>
+
+    <!-- General Information -->
+    <div class="general-info">
+      <div class="content">
+        <h1>Zero to Full-Stack Hero: Web Dev Course for Beginners</h1>  
+        <p>Transform your career without breaking the bank. No CS degree required.</p>
+        <p><b>Why is this free?</b></p>
+        <p>Because it makes no sense to sell courses that teach basics.</p>
+        <pre>
+First earn ₹30K per month and pay your bills. Don't worry. Industry sells a lot of 
+expensive stuff too; you can buy them once you have the basic knowledge.
+        </pre>
+      </div>
+    </div>
+
+    <!-- Getting Started Box -->
+    <article class="images box">
+      <button class="getting-started" onclick="window.location.href='next.html'">Getting Started</button>
+      <img src="https://learnwebdev.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FHerosection.991ae94f.png&w=1080&q=75" alt="random-image">
+    </article>
+
+    <!-- Features -->
+    <article class="infomation">
+      <article class="features">
+        <h1>Features</h1>
+        <div class="feature-box">
+          <ul>
+            <li>100% Free 11-Week Bootcamp</li>
+            <li>Curated content from various YouTube creators</li>
+            <li>Structured learning path for beginners</li>
+            <li>Focus on practical, industry-relevant skills</li>
+            <li>No CS degree required</li>
+          </ul>
+        </div>
+      </article>
+  
+      <!-- Why Box -->
+      <article class="why">
+        <div class="why-content">
+          <h1>Why This Course</h1>
+          <ul>
+            <li>Learn the basics for free before investing in expensive courses</li>
+            <li>Structured approach to web development learning</li>
+            <li>Aims to help learners earn their first tech salary</li>
+            <li>Provides a foundation for further specialized learning</li>
+          </ul>
+        </div>
+      </article>
+    </article>
+
+    <!-- Contact Us -->
+    <footer>
+      <div class="contact-box">
+        <h1>CONTACT US</h1>
+        <p>If you are feeling to contact we are always there for you. You can send us email and let us know your feedback.</p>
+        <form action="">
+          <h1>Send us an email</h1>
+          <div class="contact-info">
+            <p>Name:  <input type="text" placeholder="e.g. Johnson" class="name"></p>
+            <p>Email:  <input type="email" placeholder="xyz@gmail.com" class="email"></p>
+          </div>
+        </form>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Logout Button -->
+  <button onclick="logout()">Logout</button>
+  <script>
+    // Logout function
+    function logout() {
+      localStorage.removeItem("loggedIn"); // Clear login status
+      window.location.href = "login.html"; // Redirect to login page
+    }
+  </script>
+</body>
+</html>
